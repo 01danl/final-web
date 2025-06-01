@@ -1,0 +1,126 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #f5f5f5;
+  --primary-color: #BB1919;
+  --navbar-bg: #ffffff;
+  --accent-color: #BB1919;
+  --panel-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff; 
+  --card-bg: #2c2c2c;
+  --navbar-bg: #2c2c2c;
+  --accent-color: #ff4d4d; 
+  --panel-bg: #2c2c2c;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  font-family: 'Helvetica', Arial, sans-serif;
+}
+
+.navbar-inverse {
+  background-color: var(--navbar-bg);
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.8em;
+  color: var(--accent-color) !important;
+}
+
+.navbar-nav > li > a {
+  color: var(--text-color);
+}
+
+.navbar-nav > li > a:hover {
+  color: var(--accent-color);
+}
+
+.panel {
+  background-color: var(--panel-bg);
+  border-left: 4px solid var(--accent-color);
+  transition: box-shadow 0.2s ease;
+}
+
+.panel:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popular-panel {
+  border-left: 6px solid var(--accent-color);
+}
+
+.panel-heading {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.article-card {
+  margin-bottom: 20px;
+  background-color: var(--card-bg);
+  border-left: 4px solid var(--accent-color);
+  padding: 15px;
+  transition: box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-default, .btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+.btn-default:hover, .btn-primary:hover {
+  background-color: #a31717;
+  border-color: #a31717;
+}
+
+#theme-toggle {
+  margin: 8px 15px;
+}
+.sort-select {
+  width: 150px;
+  margin: 8px 15px;
+}
+
+.modal-content {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+footer {
+  padding: 20px 0;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 1.4em;
+  }
+  .navbar-brand {
+    font-size: 1.5em;
+  }
+  .sort-select {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel, .article-card {
+    border-left-width: 3px;
+  }
+  .popular-panel {
+    border-left-width: 4px;
+  }
+}
